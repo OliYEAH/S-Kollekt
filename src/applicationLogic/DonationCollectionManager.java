@@ -724,6 +724,9 @@ public class DonationCollectionManager {
 			CollectionAccess.loadAllCollectionsFromDB();
 			;
 		}
+		//added by sz (leere liste mit hinzugefügter liste verglichen)
+		boxHistoryUpdate(new ArrayList<DonationBox>(), collection.getDonationboxes(), collection.getCollectionId());
+		
 		CollectionAccess.loadAllCollectionsFromDB();
 		Access.loadAllDonationBoxes(); // added by ml
 	}
@@ -857,6 +860,10 @@ public class DonationCollectionManager {
 				.setOrganisationPersonReferenceInDonationCollection(
 						collection.getOrganizationPerson().getPersonId(),
 						collection.getCollectionId());
+		
+		//added by sz (leere liste mit hinzugefügter liste verglichen)
+		boxHistoryUpdate(new ArrayList<DonationBox>(), collection.getDonationboxes(), collection.getCollectionId());
+		
 		CollectionAccess.loadAllCollectionsFromDB();
 		Access.loadAllDonationBoxes(); // addes by ml
 

@@ -28,7 +28,7 @@ import applicationLogic.PersonManager;
 import com.itextpdf.text.DocumentException;
 
 /**
- * @author Elsevar
+ * @author Etibar
  *
  */
 
